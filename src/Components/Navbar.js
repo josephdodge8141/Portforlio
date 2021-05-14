@@ -49,6 +49,18 @@ const Navbar = () => {
               Portfolio
             </Link>
           </li>
+          <li className="nav-item">
+            <Link
+              activeClass="active"
+              to="section4"
+              spy={true}
+              smooth={true}
+              offset={-35}
+              duration={1200}
+            >
+              Contact
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

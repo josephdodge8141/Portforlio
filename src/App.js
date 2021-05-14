@@ -5,6 +5,7 @@ import Section from "./Components/Section";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
 import Portfolio from "./Components/Portfolio";
+import Contact from "./Components/Contact"
 
 
 function App() {
@@ -27,7 +28,11 @@ function App() {
         dark={false}
         id="section3"
       />
-
+      <Section
+        content = {Contact()}
+        dark={true}
+        id="section4"
+      />
     </div>
   );
 }

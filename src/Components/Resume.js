@@ -4,7 +4,7 @@ import ModalView from './ModalView'
 
 const Resume = () => {
     return (
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 40 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 50 }}>
             <ScrollAnimation animateIn='fadeInLeft'>
                 <div>
                     <ModalView

@@ -6,7 +6,7 @@ import Card from './Card';
 
 const modalables = {
     1: {
-        pageContent: <img src="portrait.jpeg" alt="Portrait" style={{ width:'39vw' }} />,
+        pageContent: <img src="portrait.jpeg" alt="Portrait" style={{ width:'37vw', boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 12px 0 rgba(0, 0, 0, 0.19)' }} />,
         modalContent: undefined
     },
     2: { 
