@@ -2,12 +2,43 @@ import React, { useState } from "react";
 import Modal from 'react-modal';
 import { Document, Page } from 'react-pdf'
 import styled from 'styled-components';
+import Card from './Card';
 
 const modalables = {
-    1: <img src="portrait.jpeg" alt="Portrait" style={{ width:'39vw' }} />,
-    2:  <Document file='resume.pdf'>
-            <Page pageNumber={1} />
-        </Document>,
+    1: {
+        pageContent: <img src="portrait.jpeg" alt="Portrait" style={{ width:'39vw' }} />,
+        modalContent: undefined
+    },
+    2: { 
+        pageContent: <Document file='resume.pdf'>
+                        <Page pageNumber={1} />
+                    </Document>,
+        modalContent: undefined
+    },
+    3: { 
+        pageContent: <Card title='Crypto' tag='Crypto' />,
+        modalContent: undefined
+    },
+    4: { 
+        pageContent: <Card title='Lichess NN' tag='Lichess-Neural-Network' />,
+        modalContent: undefined
+    },
+    5: { 
+        pageContent: <Card title='Mary and Hyrum' tag='Mary-and-Hyrum' />,
+        modalContent: undefined
+    },
+    6: { 
+        pageContent: <Card title='Reinforcement ML' tag='Reinforcement-Learning-Practice' />,
+        modalContent: undefined
+    },
+    7: { 
+        pageContent: <Card title='konduit' tag='konduit' />,
+        modalContent: undefined
+    },
+    8: { 
+        pageContent: <Card title='Portfolio' tag='Portforlio' />,
+        modalContent: undefined
+    }
     
 }
 
@@ -65,13 +96,13 @@ const ModalView = ({ contentId, title }) => {
     }
 
     const handlePopClick = () => {
-        setOpen(true)
+        setOpen(false)
         setId(contentId)
     }
     return (
         <>
             <div onClick={() => handlePopClick()}>
-                {modalables[contentId]}
+                {modalables[contentId].pageContent}
             </div>
             {
                 isOpen && (
@@ -81,7 +112,7 @@ const ModalView = ({ contentId, title }) => {
                         style={customStyles}
                         contentLabel={title}
                     >
-                        {modalables[id]}
+                        {modalables[id].modalContent ? modalables[id].modalContent : modalables[id].pageContent }
                         <Button style={{bottom: '45vh', left: '16px'}} onClick={() => toggleId('down')}>
                             &lt;
                         </Button>

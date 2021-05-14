@@ -7,7 +7,7 @@ const About = () => {
 
   return (
     <div className="about-section" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gridGap: 40 }}>
-      <ScrollAnimation animateIn='fadeInLeft' animateOut="fadeOut">
+      <ScrollAnimation animateIn='fadeInDown' animateOut="fadeOut">
         <div>
           <h1>Joseph Dodge</h1>
           <p>I have been infatuated with software since I was in middle school and heard about javascript. That eventually translated into some freelance gigs for local shops in the SLC area. What turned my infatuation into a full blown passion was when I got to see the true power of engineering as deepmind released a neural network to play chess. After being given only the rules and four hours of training this hyper tuned model obliterated the top level engine at the time. As a fan of the game and future focused software I was hooked. </p>
@@ -15,7 +15,7 @@ const About = () => {
           <p>Which right now is mostly music, I play several instruments and have written music for a few years, and of course still playing way too much chess. </p>
         </div>
       </ScrollAnimation>
-      <ScrollAnimation animateIn='fadeInRight' animateOut="fadeOut">  
+      <ScrollAnimation animateIn='fadeInDown' animateOut="fadeOut">  
         <ModalView
           contentId={1} 
           title="Portrait"
